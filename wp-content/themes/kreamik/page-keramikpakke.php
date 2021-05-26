@@ -30,6 +30,7 @@ get_header();
     <main id="main" class="site-main">
         <h1>Keramikpakker</h1>
         <nav id="filtrering">
+            <button class="filter" data-keramikpakke="6">Vase</button>
         </nav>
         <section id="liste"></section>
     </main><!-- #main -->
@@ -39,25 +40,25 @@ get_header();
         document.addEventListener("DOMContentLoaded", loadJSON)
         let keramikpakke;
         let indhold;
-        let filterKeramikpakke = 75;
+        let filterKeramikpakke = 6;
 
-        const dbUrl = "http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-json/wp/v2/sendeplan?per_page=100";
-        const catUrl = "http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-json/wp/v2/ugedage";
+        const dbUrl = "http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-json/wp/v2/keramikpakke?per_page=100";
+        const catUrl = "http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-json/wp/v2/indhold";
 
         async function loadJSON() {
             const data = await fetch(dbUrl);
             const catdata = await fetch(catUrl)
-            sendeplan = await data.json();
-            ugedage = await catdata.json();
-            console.log(ugedage);
-            visSendeplan();
+            keramikpakke = await data.json();
+            indhold = await catdata.json();
+            console.log(indhold);
+            visKeramikpakke();
             opretknapper();
         }
 
         function opretknapper() {
 
             ugedage.forEach(cat => {
-                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-sendeplan="${cat.id}">${cat.name}</button>`
+                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-keramikpakke="${cat.id}">${cat.name}</button>`
             })
 
             addEventListenersToButtons();
@@ -70,26 +71,27 @@ get_header();
         };
 
         function filtrering() {
-            filterSendeplan = this.dataset.sendeplan;
-            console.log(filterSendeplan);
+            filterKeramikpakke = this.dataset.keramikpakke;
+            console.log(filterKeramikpakke);
 
-            visSendeplan();
+            visKeramikpakke();
         }
 
         //funktion der viser retter i liste view
-        function visSendeplan() {
+        function visKeramikpakke() {
             const dest = document.querySelector("#liste"); // container til articles med en ret
             const skabelon = document.querySelector("template").content; // select indhold af html skabelon (article)
             dest.textContent = ""; // ryd container inden ny loop
-            sendeplan.forEach(sendeplan => {
-                if (sendeplan.ugedage.includes(parseInt(filterSendeplan))) {
+            keramikpakke.forEach(keramikpakke => {
+                if (sendeplan.indhold.includes(parseInt(filterKeramikpakke))) {
                     const klon = skabelon.cloneNode(true);
-                    klon.querySelector(".tid").textContent = sendeplan.tid;
-                    klon.querySelector(".podcastbillede").src = sendeplan.podcastbillede.guid;
-                    klon.querySelector(".titel").textContent = sendeplan.title.rendered;
-                    klon.querySelector(".beskrivelse").textContent = sendeplan.beskrivelse;
+                    klon.querySelector(".titel").textContent = keramikpakke.title.rendered;
+                    klon.querySelector(".keramikpakke_img").src = keramikpakke.billede.guid;
+
+                    klon.querySelector(".beskrivelse").textContent = keramikpakke.beskrivelse;
+                    klon.querySelector(".pris").textContent = keramikpakke.pris;
                     //                    klon.querySelector(".sepodcast").textContent = sendeplan.sepodcast;
-                    klon.querySelector(".loopart a").href = sendeplan.sepodcast;
+                    klon.querySelector(".article a").href = keramikpakke.read_more;
 
                     // nyt
                     dest.appendChild(klon);
