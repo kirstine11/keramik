@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php astra_content_bottom(); ?>
 	</div> <!-- ast-container -->
 	</div><!-- #content -->
-    test
+
 <?php
 	astra_content_after();
 
