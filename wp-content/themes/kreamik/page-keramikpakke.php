@@ -10,7 +10,6 @@
 get_header();
 ?>
 
-<h1></h1>
 <style></style>
 
 <template>
