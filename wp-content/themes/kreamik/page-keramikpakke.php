@@ -4,7 +4,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Astra
- * @since 1.0.1
+ * @since 1.0
  */
 
 get_header();
@@ -30,6 +30,7 @@ get_header();
         <h1>Keramikpakker</h1>
         <nav id="filtrering">
             <button class="filter" data-keramikpakke="6">Vase</button>
+            <button class="filter" data-keramikpakke="5">krus</button>
         </nav>
         <section id="liste"></section>
     </main><!-- #main -->
