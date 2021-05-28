@@ -1,9 +1,10 @@
 <?php
 /**
- * The template is for displaying keramikpakker
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * The template for displaying poscast
  *
-  * @package WordPress
+* Template Name: Podcast
+
+ * @package WordPress
  * @subpackage Twenty_Nineteen
  * @since Twenty Nineteen 1.0
  */
@@ -11,96 +12,109 @@
 get_header();
 ?>
 
-<style></style>
 
 <template>
-    <article class="article">
-        <h2 class="pakkenr"></h2>
-        <img src="" alt="keramikpakke_billede" class="keramikpakke_img">
-        <div class="tekst">
-            <h2 class="titel"></h2>
-            <p class="beskrivelse"></p>
-            <h3 class="pris"></h3>
+    <article id="holdind">
+        <div id="diver"> <img class="podcastimg" src="" alt="podcastimg">
+            <div>
+                <h2></h2>
+                <p class="beskrivelse"></p>
+            </div>
         </div>
-        <a href="" class="read_more">Læs mere</a>
     </article>
 </template>
 
-<div id="primary" class="content-area">
+<section id="primary" class="content-area">
     <main id="main" class="site-main">
-        <h1>Keramikpakker</h1>
-        <nav id="filtrering">
-            <button class="filter" data-keramikpakke="5">Vase</button>
-            <button class="filter" data-keramikpakke="6">krus</button>
-        </nav>
-        <section id="liste"></section>
-    </main><!-- #main -->
-    <script>
-        const header = document.querySelector("header h1");
+        <div>
+            <div id="podHead">
+                <h2>PODCAST</h2>
+                <h6>Find vores mange programmer, udsendelser, serier, afsnit og episoder her.
+                </h6>
+                <img src="http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-content/uploads/2021/04/people_train.jpg" alt="train_boy">
+            </div>
+            <nav id="filtrering"><button data-podcast="alle">ALLE</button> <button data-podcast="67"> AKTUELT </button>
+                <button data-podcast="71"> <img src="http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-content/uploads/2021/04/CRIME-1.svg" alt="crime_icon"> CRIME </button> <button data-podcast="67"> <img src="http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-content/uploads/2021/04/historie-1.svg" alt="historie_icon"> HISTORIE </button> <button data-podcast="73"> <img src="http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-content/uploads/2021/04/KULTUR.svg" alt="kultur_icon"> KULTUR </button>
+                <button data-podcast="72"> <img src="http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-content/uploads/2021/04/globus.svg" alt="nyheder_icon"> NYHEDER </button> <button data-podcast="70"><img src="http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-content/uploads/2021/04/handtegn.svg" alt="ungdom_icon">UNGDOM</button> <button data-podcast="68"><img src="http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-content/uploads/2021/04/samfund-1.svg" alt="samfund_icon">SAMFUND
+                </button>
+            </nav>
 
-        document.addEventListener("DOMContentLoaded", loadJSON)
-        let keramikpakke;
-        let indhold;
-        //        let filterKeramikpakke = 6;
+        </div>
+        <section id="podcastcontainer">
+        </section>
+    </main> <!-- #main -->
+</section> <!-- #primary -->
 
-        const dbUrl = "http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-json/wp/v2/keramikpakke?per_page=100";
-        const catUrl = "http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-json/wp/v2/indhold";
 
-        async function loadJSON() {
-            const data = await fetch(dbUrl);
-            const catdata = await fetch(catUrl)
-            keramikpakke = await data.json();
-            indhold = await catdata.json();
-            console.log(indhold);
-            visKeramikpakke();
-            opretknapper();
-        }
 
-        function opretknapper() {
 
-            ugedage.forEach(cat => {
-                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-keramikpakke="${cat.id}">${cat.name}</button>`
-            })
 
-            addEventListenersToButtons();
-        }
+<script>
+    let podcasts;
+    let genre;
+    let filterPodcast = "alle";
+    const dbUrl = "http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-json/wp/v2/podcast?per_page=100";
+    const catUrl = "http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-json/wp/v2/genre";
 
-        function addEventListenersToButtons() {
-            document.querySelectorAll("#filtrering button").forEach(elm => {
-                elm.addEventListener("click", filtrering);
-            })
-        };
+    async function getJson() {
+        const data = await fetch("http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-json/wp/v2/podcast?per_page=100");
+        const catdata = await fetch("http://julieeggertsen.dk/kea/2_sem/tema_09/09_loud/09_loud_site/wp-json/wp/v2/genre");
+        podcasts = await data.json();
+        genre = await catdata.json();
+        console.log(genre);
+        visPodcasts();
+        opretknapper();
+    };
 
-        function filtrering() {
-            filterKeramikpakke = this.dataset.keramikpakke;
-            console.log(filterKeramikpakke);
 
-            visKeramikpakke();
-        }
+    function opretknapper() {
+        genre.forEach(cat => {
+            document.querySelector("#filtrering").innerHTML
+        })
+        addEventListenerToButtons();
+    }
 
-        //funktion der viser retter i liste view
-        function visKeramikpakke() {
-            const dest = document.querySelector("#liste"); // container til articles med en ret
-            const skabelon = document.querySelector("template").content; // select indhold af html skabelon (article)
-            dest.textContent = ""; // ryd container inden ny loop
-            keramikpakke.forEach(keramikpakke => {
-                if (sendeplan.indhold.includes(parseInt(filterKeramikpakke))) {
-                    const klon = skabelon.cloneNode(true);
-                    klon.querySelector(".titel").textContent = keramikpakke.title.rendered;
-                    klon.querySelector(".keramikpakke_img").src = keramikpakke.billede.guid;
+    function addEventListenerToButtons() {
+        document.querySelectorAll("#filtrering button").forEach(elm => {
+            elm.addEventListener("click", filtrering);
+        })
+    };
 
-                    klon.querySelector(".beskrivelse").textContent = keramikpakke.beskrivelse;
-                    klon.querySelector(".pris").textContent = keramikpakke.pris;
-                    //                    klon.querySelector(".sepodcast").textContent = sendeplan.sepodcast;
-                    klon.querySelector(".article a").href = keramikpakke.read_more;
 
-                    // nyt
-                    dest.appendChild(klon);
-                }
-            })
-        }
 
-    </script>
+    function filtrering() {
+        filterPodcast = this.dataset.podcast;
+        console.log(filterPodcast);
+        visPodcasts();
 
-    <?php
+    }
+
+
+
+
+    function visPodcasts() {
+        let temp = document.querySelector("template");
+        let container = document.querySelector("#podcastcontainer")
+        container.innerHTML = "";
+        podcasts.forEach(podcast => {
+            if (filterPodcast == "alle" || podcast.genre.includes(parseInt(filterPodcast))) {
+
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h2").textContent = podcast.title.rendered;
+                klon.querySelector(".podcastimg").src = podcast.billede.guid;
+                klon.querySelector(".beskrivelse").innerHTML = podcast.beskrivelse;
+                klon.querySelector("article").addEventListener("click", () => {
+                    location.href = podcast.link;
+                })
+                container.appendChild(klon);
+            }
+        })
+    }
+
+
+
+    getJson();
+
+</script>
+<?php
 get_footer();
