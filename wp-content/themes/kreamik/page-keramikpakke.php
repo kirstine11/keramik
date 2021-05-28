@@ -3,8 +3,9 @@
  * The template is for displaying keramikpakker
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Astra
- * @since 1.0
+  * @package WordPress
+ * @subpackage Twenty_Nineteen
+ * @since Twenty Nineteen 1.0
  */
 
 get_header();
