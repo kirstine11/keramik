@@ -11,6 +11,17 @@
 get_header();
 ?>
 
+<style>
+    .infografik {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+/*
+        margin-right: 5vw;
+        margin-left: 5vw;
+*/
+    }
+
+</style>
 <template>
     <article class="loopart">
         <img src="" alt="keramikpakke_billede" class="keramikpakkeimg">
