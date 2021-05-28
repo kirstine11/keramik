@@ -30,8 +30,8 @@ get_header();
     <main id="main" class="site-main">
         <h1>Keramikpakker</h1>
         <nav id="filtrering">
-            <button class="filter" data-keramikpakke="6">Vase</button>
-            <button class="filter" data-keramikpakke="5">krus</button>
+            <button class="filter" data-keramikpakke="5">Vase</button>
+            <button class="filter" data-keramikpakke="6">krus</button>
         </nav>
         <section id="liste"></section>
     </main><!-- #main -->
@@ -41,7 +41,7 @@ get_header();
         document.addEventListener("DOMContentLoaded", loadJSON)
         let keramikpakke;
         let indhold;
-        let filterKeramikpakke = 6;
+        //        let filterKeramikpakke = 6;
 
         const dbUrl = "http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-json/wp/v2/keramikpakke?per_page=100";
         const catUrl = "http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-json/wp/v2/indhold";
