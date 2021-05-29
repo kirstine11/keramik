@@ -14,12 +14,21 @@ get_header();
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://use.typekit.net/tgw1asp.css">
+
 <style>
+    #kreamikhead {
+        max-width: 1500px;
+        margin: 0 auto 40px;
+    }
+
     .infografik {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        max-width: 960px;
+        max-width: 1500px;
         gap: 10px;
+        align-items: center;
+        margin: 0 auto;
     }
 
     .step img {
@@ -35,6 +44,79 @@ get_header();
         color: black;
         font-family: 'Quicksand', sans-serif;
         word-break: break-word;
+    }
+
+    .step h4 {
+        font-family: neue-kabel, sans-serif;
+        font-weight: 600;
+    }
+
+    .keramikpakkeimg {
+        width: 400px;
+    }
+
+    .strokeimg {
+        width: 50%;
+    }
+
+    #keramikcontainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        margin: 0 auto;
+        max-width: 1500px;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #filtrering {
+        margin: 0 auto 50px;
+        max-width: 1500px;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #filtrering button {
+        border: solid 2px #E07A34;
+        background-color: #FDF8F4;
+        color: black;
+        font-family: neue-kabel, sans-serif;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        width: 150px;
+    }
+
+    #filtrering img {
+        width: 25px;
+        margin: auto;
+    }
+
+    .loopart {
+        width: 100%;
+        text-align: center;
+    }
+
+    .loopart h2 {
+        font-family: neue-kabel, sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .pris {
+        font-family: 'Quicksand', sans-serif;
+        color: black;
+        font-size: 20px;
+        margin-top: -20px;
+        margin-bottom: 11px;
+    }
+
+    .read_more {
+        margin-top: -10px;
+        background-color: #AF9E91;
+        font-family: 'Quicksand', sans-serif;
+        color: white;
     }
 
 </style>
@@ -62,48 +144,51 @@ get_header();
             <section class="infografik">
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vaelgkeramikpakker.png" alt="kasse med keramik">
-                    <h4>Vælg keramikpakke</h4>
+                    <h4>1: Vælg keramikpakke</h4>
                     <p>Pensler lånes med. Har du andre ønsker du skriv til kontakt@kreamik.dk.</p>
                 </div>
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vaelgfarver.png">
-                    <h4>Vælg tre farver</h4>
+                    <h4>2: Vælg tre farver</h4>
                     <p>Ønsker du flere farver? Du kan vælge mellem 50 farver. Tilkøb koster 25 kr.</p>
                 </div>
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/book.png">
-                    <h4>Book afhentningsdag</h4>
+                    <h4>3: Book afhentningsdag</h4>
                     <p>Her har du mulighed for at booke din afhentningsdag.</p>
                 </div>
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/mobilepay-1.png" alt="kasse med keramik">
-                    <h4>Betal på mobilepay</h4>
+                    <h4>4: Betal på mobilepay</h4>
                     <p>Betal på nummeret bla bla</p>
                 </div>
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/hent.png" alt="kasse med keramik">
-                    <h4>Hent din keramikpakke</h4>
+                    <h4>5: Hent din keramikpakke</h4>
                     <p>Hent din keramikpakke om lørdagen mellem 13-15. Her vil du også få nogle tips og tricks med på vejen.</p>
                 </div>
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/aflever.png" alt="kasse med keramik">
-                    <h4>Aflever keramik til brænding</h4>
+                    <h4>6: Aflever keramik til brænding</h4>
                     <p>Aflever dit malede keramik til brænding samt pensler på lørdage mellem 13-15.</p>
                 </div>
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/braender.png" alt="kasse med keramik">
-                    <h4>Vi brænder dit keramik</h4>
+                    <h4>7: Vi brænder dit keramik</h4>
                     <p>Vi glaserer og brænder dit keramik, hvilket er inkluderet i pakkeprisen.</p>
                 </div>
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/afhentigen.png" alt="kasse med keramik">
-                    <h4>Afhent efter 1-2 uger</h4>
+                    <h4>8: Afhent efter 1-2 uger</h4>
                     <p>Afhent dit færdige keramik efter 1-2 uger på lørdage mellem 13-15.</p>
                 </div>
             </section>
+            <div class="strokeimg">
+                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/Groen-pensel.png" alt="grønt penselstrøg">
+            </div>
 
             <nav id="filtrering"><button data-keramikpakke="alle">Alle</button> <button data-keramikpakke="6"> Krus </button>
-                <button data-keramikpakke="5"> <img src=""> Vase </button>
+                <button data-keramikpakke="5"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vase.svg"> Vase </button>
                 <button data-keramikpakke="13"> <img src=""> Skål </button>
                 <button data-keramikpakke="14"> <img src=""> Fad </button>
                 <button data-keramikpakke="15"> <img src=""> Figur </button>
