@@ -119,6 +119,10 @@ get_header();
         color: white;
     }
 
+    .read_more:hover {
+        color: white;
+    }
+
 </style>
 <template>
     <article class="loopart">
@@ -128,7 +132,7 @@ get_header();
             <h2 class="titel"></h2>
             <p class="beskrivelse"></p>
             <p class="pris"></p>
-            <button class="read_more">Læs mere</button>
+            <button class="read_more">LÆS MERE</button>
         </div>
     </article>
 </template>
