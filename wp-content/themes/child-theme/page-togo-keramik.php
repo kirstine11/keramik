@@ -10,15 +10,31 @@
 
 get_header();
 ?>
+<!--Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
 <style>
     .infografik {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-/*
-        margin-right: 5vw;
-        margin-left: 5vw;
-*/
+        max-width: 960px;
+        gap: 10px;
+    }
+
+    .step img {
+        width: 150px;
+    }
+
+    .step {
+        width: 100%;
+        text-align: center;
+    }
+
+    .step p {
+        color: black;
+        font-family: 'Quicksand', sans-serif;
+        word-break: break-word;
     }
 
 </style>
@@ -44,42 +60,42 @@ get_header();
                 <h6>Hos Kreamik har du også mulighed for at købe ToGo keramikpakker. Nedenfor kan du se hvordan det fungerer.</h6>
             </div>
             <section class="infografik">
-                <div class="step_et">
+                <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vaelgkeramikpakker.png" alt="kasse med keramik">
                     <h4>Vælg keramikpakke</h4>
                     <p>Pensler lånes med. Har du andre ønsker du skriv til kontakt@kreamik.dk.</p>
                 </div>
-                <div class="step_to">
+                <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vaelgfarver.png">
                     <h4>Vælg tre farver</h4>
                     <p>Ønsker du flere farver? Du kan vælge mellem 50 farver. Tilkøb koster 25 kr.</p>
                 </div>
-                <div class="step_tre">
+                <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/book.png">
                     <h4>Book afhentningsdag</h4>
                     <p>Her har du mulighed for at booke din afhentningsdag.</p>
                 </div>
-                <div class="step_fire">
+                <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/mobilepay-1.png" alt="kasse med keramik">
                     <h4>Betal på mobilepay</h4>
                     <p>Betal på nummeret bla bla</p>
                 </div>
-                <div class="step_fem">
+                <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/hent.png" alt="kasse med keramik">
                     <h4>Hent din keramikpakke</h4>
                     <p>Hent din keramikpakke om lørdagen mellem 13-15. Her vil du også få nogle tips og tricks med på vejen.</p>
                 </div>
-                <div class="step_seks">
+                <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/aflever.png" alt="kasse med keramik">
                     <h4>Aflever keramik til brænding</h4>
                     <p>Aflever dit malede keramik til brænding samt pensler på lørdage mellem 13-15.</p>
                 </div>
-                <div class="step_syv">
+                <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/braender.png" alt="kasse med keramik">
                     <h4>Vi brænder dit keramik</h4>
                     <p>Vi glaserer og brænder dit keramik, hvilket er inkluderet i pakkeprisen.</p>
                 </div>
-                <div class="step_otte">
+                <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/afhentigen.png" alt="kasse med keramik">
                     <h4>Afhent efter 1-2 uger</h4>
                     <p>Afhent dit færdige keramik efter 1-2 uger på lørdage mellem 13-15.</p>
