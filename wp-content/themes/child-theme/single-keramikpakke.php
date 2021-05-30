@@ -63,7 +63,7 @@ get_header();
             <h2>Bestil keramikpakke</h2>
         </div>
 
-        <form name="bestilling" netlify>
+        <form name="bestilling" data-netlify="true">
             <div class="form-felt">
                 <label for="full-name">Fulde navn</label>
                 <input id="full-name" name="fname" type="text">
