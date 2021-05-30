@@ -94,7 +94,6 @@ get_header();
         color: black;
         font-family: neue-kabel, sans-serif;
         font-weight: 600;
-        /*        display: flex;*/
         align-items: center;
         width: 150px;
         margin: 2px;

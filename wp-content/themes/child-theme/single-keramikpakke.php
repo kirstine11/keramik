@@ -35,10 +35,87 @@ get_header();
         color: white;
         text-align: center;
         font-size: 15px;
+        padding: 10px;
     }
 
     .pris {
         font-weight: 600;
+    }
+
+    form.content {
+        display: grid;
+        gap: 5px;
+    }
+
+    .form-felt input {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .bestil h2 {
+        color: #246548;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .strokeimg {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        right: 62px;
+    }
+
+    @media only screen and (min-width: 800px) {
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .tekst {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .beskrivelse {
+            padding: 42px;
+            font-size: 25px;
+        }
+
+        .pris {
+            padding: 42px;
+            font-size: 25px;
+        }
+
+        .strokeimg {
+            margin-top: 32px;
+        }
+
+        .article h2 {
+            font-size: 45px;
+        }
+
+        form.content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        input.content {
+            width: 100%;
+        }
+
+        .indsend:hover {
+            background-color: #AF9E91;
+            color: #FDF8F4;
+        }
+
+        .bestil h2 {
+            font-size: 39px;
+        }
     }
 
 </style>
@@ -47,11 +124,13 @@ get_header();
     <main id="main" class="site-main">
         <article class="article">
             <h2 class="pakkenr"></h2>
-            <img src="" alt="keramikpakke_billede" class="keramikpakkeimg">
-            <div class="tekst">
-                <h2 class="titel"></h2>
-                <p class="beskrivelse"></p>
-                <p class="pris"></p>
+            <div class="content">
+                <img src="" alt="keramikpakke_billede" class="keramikpakkeimg">
+                <div class="tekst">
+                    <h2 class="titel"></h2>
+                    <p class="beskrivelse"></p>
+                    <p class="pris"></p>
+                </div>
                 <!--                <button class="read_more">LÆS MERE</button>-->
             </div>
         </article>
@@ -63,54 +142,56 @@ get_header();
             <h2>Bestil keramikpakke</h2>
         </div>
 
-        <form name="bestilling" data-netlify="true">
-            <div class="form-felt">
-                <label for="full-name">Fulde navn</label>
-                <input id="full-name" name="fname" type="text">
+        <form class="bestilling" name="bestilling" data-netlify="true">
+            <div class="content">
+                <div class="form-felt">
+                    <label for="full-name">Fulde navn</label>
+                    <input id="full-name" name="fname" type="text">
+                </div>
+
+                <div class="form-felt">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email">
+                </div>
+
+                <div class="form-felt">
+                    <label for="tel">Telefon</label>
+                    <input id="tel" name="tel" type="tel">
+                </div>
+
+                <div class="form-felt">
+                    <label for="afhentning">Afhentningsdato</label>
+                    <input id="date" name="date" type="date">
+                </div>
+
+                <div class="form-felt">
+                    <label>Pakkenummer
+                        <select name="liste">
+                            <option value="">Vælg pakke</option>
+                            <option value="et">Keramikpakke 1</option>
+                            <option value="to">Keramikpakke 2</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-felt">
+                    <label>Farver
+                        <select name="liste">
+                            <option value="">Vælg 3 farver</option>
+                            <option value="rød">Rød</option>
+                            <option value="blå">Blå</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-felt">
+                    <label>Har du nogle tilføjelser til bestillingen?
+                        <textarea name="besked" rows="5"></textarea>
+                    </label>
+                </div>
             </div>
 
-            <div class="form-felt">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email">
-            </div>
-
-            <div class="form-felt">
-                <label for="tel">Telefon</label>
-                <input id="tel" name="tel" type="tel">
-            </div>
-
-            <div class="form-felt">
-                <label for="afhentning">Afhentningsdato</label>
-                <input id="date" name="date" type="date">
-            </div>
-
-            <div class="form-felt">
-                <label>Pakkenummer
-                    <select name="liste">
-                        <option value="">Vælg pakke</option>
-                        <option value="et">Keramikpakke 1</option>
-                        <option value="to">Keramikpakke 2</option>
-                    </select>
-                </label>
-            </div>
-
-            <div class="form-felt">
-                <label>Farver
-                    <select name="liste">
-                        <option value="">Vælg 3 farver</option>
-                        <option value="rød">Rød</option>
-                        <option value="blå">Blå</option>
-                    </select>
-                </label>
-            </div>
-
-            <div class="form-felt">
-                <label>Har du nogle tilføjelser til bestillingen?
-                    <textarea name="besked" rows="5"></textarea>
-                </label>
-            </div>
-
-            <button>Indsend</button>
+            <button class="indsend">Indsend</button>
         </form>
 
     </main> <!-- #main -->
