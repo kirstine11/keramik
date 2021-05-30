@@ -1,14 +1,4 @@
 <style>
-    /*----lej drejeskive side------*/
-    /*    orange penselstrøg*/
-    .elementor-349 .elementor-element .elementor-element-9a84b88 img {
-        margin-right: -10px;
-    }
-
-    /*    orange penselstrøg nr to*/
-    .elementor-349 .elementor-element .elementor-element-c860335 img {
-        margin-left: -10px;
-    }
 
 </style>
 <?php

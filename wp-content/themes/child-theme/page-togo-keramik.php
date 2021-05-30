@@ -86,12 +86,6 @@ get_header();
         text-align: center;
 
         max-width: 1500px;
-        /*
-        gap: 20px;
-        display: flex;
-        justify-content: center;
-*/
-
     }
 
     #filtrering button {
@@ -155,7 +149,22 @@ get_header();
     }
 
     /*   desktop styling */
-    @media only screen and (min-width: 768px) {}
+    @media only screen and (min-width: 900px) {
+        #kreamikhead {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+
+        #kreamikhead h6 {
+            margin-top: -11px;
+            margin-left: 41px;
+        }
+
+        #kreamikhead h1 {
+            margin-top: 36px;
+            margin-left: 41px;
+        }
+    }
 
 </style>
 <template>
