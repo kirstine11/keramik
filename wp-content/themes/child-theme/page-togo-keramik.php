@@ -20,6 +20,13 @@ get_header();
     #kreamikhead {
         max-width: 1500px;
         margin: 0 auto 40px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin-left: 15px;
+    }
+
+    #kreamikhead h1 {
+        color: #246548;
     }
 
     .infografik {
@@ -29,6 +36,7 @@ get_header();
         gap: 10px;
         align-items: center;
         margin: 0 auto;
+        padding: 15px;
     }
 
     .step img {
@@ -51,12 +59,17 @@ get_header();
         font-weight: 600;
     }
 
+    .step h4:first-letter {
+        color: #E07A34;
+        font-size: 20px;
+    }
+
     .keramikpakkeimg {
         width: 400px;
     }
 
     .strokeimg {
-        width: 50%;
+        margin-bottom: 40px;
     }
 
     #keramikcontainer {
@@ -70,21 +83,38 @@ get_header();
 
     #filtrering {
         margin: 0 auto 50px;
+        text-align: center;
+
         max-width: 1500px;
+        /*
         gap: 20px;
         display: flex;
         justify-content: center;
+*/
+
     }
 
     #filtrering button {
-        border: solid 2px #E07A34;
+        border: solid 1px #E07A34;
         background-color: #FDF8F4;
         color: black;
         font-family: neue-kabel, sans-serif;
         font-weight: 600;
-        display: flex;
+        /*        display: flex;*/
         align-items: center;
         width: 150px;
+        margin: 2px;
+        padding: 4px;
+    }
+
+    #filtrering button:focus {
+        background: #E07A34;
+        color: #FDF8F4;
+    }
+
+    #filtrering button:hover {
+        background: #E07A34;
+        color: #FDF8F4;
     }
 
     #filtrering img {
@@ -95,6 +125,7 @@ get_header();
     .loopart {
         width: 100%;
         text-align: center;
+        padding: 15px;
     }
 
     .loopart h2 {
@@ -143,7 +174,9 @@ get_header();
 
             <div id="kreamikhead">
                 <h1>To go keramik</h1>
+                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/orange_streg.svg" alt="orange penselstrøg">
                 <h6>Hos Kreamik har du også mulighed for at købe ToGo keramikpakker. Nedenfor kan du se hvordan det fungerer.</h6>
+
             </div>
             <section class="infografik">
                 <div class="step">
@@ -188,15 +221,23 @@ get_header();
                 </div>
             </section>
             <div class="strokeimg">
-                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/Groen-pensel.png" alt="grønt penselstrøg">
+                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/gron_streg.svg" alt="grønt penselstrøg">
             </div>
 
-            <nav id="filtrering"><button data-keramikpakke="alle">Alle</button> <button data-keramikpakke="6"> Krus </button>
-                <button data-keramikpakke="5"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vase.svg"> Vase </button>
-                <button data-keramikpakke="13"> <img src=""> Skål </button>
-                <button data-keramikpakke="14"> <img src=""> Fad </button>
-                <button data-keramikpakke="15"> <img src=""> Figur </button>
-                <button data-keramikpakke="16"> <img src=""> Andet </button>
+            <nav id="filtrering">
+                <button data-keramikpakke="alle"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/alle2.svg"> Alle </button>
+
+                <button data-keramikpakke="6"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/krus.svg"> Krus </button>
+
+                <button data-keramikpakke="5"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vase2.svg"> Vase </button>
+
+                <button data-keramikpakke="13"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/skal.svg"> Skål </button>
+
+                <button data-keramikpakke="14"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/fad.svg"> Fad </button>
+
+                <button data-keramikpakke="15"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/figur-1.svg"> Figur </button>
+
+                <button data-keramikpakke="16"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/andet.svg"> Andet </button>
             </nav>
 
         </div>
