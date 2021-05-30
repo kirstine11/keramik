@@ -154,6 +154,9 @@ get_header();
         color: white;
     }
 
+    /*   desktop styling */
+    @media only screen and (min-width: 768px) {}
+
 </style>
 <template>
     <article class="loopart">
