@@ -221,7 +221,7 @@ get_header();
                 </div>
             </section>
             <div class="strokeimg">
-                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/gron_streg.svg" alt="grønt penselstrøg">
+                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/green_stroke.svg" alt="grønt penselstrøg">
             </div>
 
             <nav id="filtrering">

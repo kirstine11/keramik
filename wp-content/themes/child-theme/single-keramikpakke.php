@@ -16,12 +16,38 @@ get_header();
 
 <link rel="stylesheet" href="https://use.typekit.net/tgw1asp.css">
 
+<style>
+    .article {
+        display: grid;
+    }
+
+    .article h2 {
+        color: #246548;
+        font-size: 30px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .tekst {
+        background-color: #E07A34;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .pris {
+        font-weight: 600;
+    }
+
+</style>
 
 <section id="primary" class="content-area">
     <main id="main" class="site-main">
-        <article class="loopart">
-            <img src="" alt="keramikpakke_billede" class="keramikpakkeimg">
+        <article class="article">
             <h2 class="pakkenr"></h2>
+            <img src="" alt="keramikpakke_billede" class="keramikpakkeimg">
             <div class="tekst">
                 <h2 class="titel"></h2>
                 <p class="beskrivelse"></p>
@@ -29,30 +55,84 @@ get_header();
                 <!--                <button class="read_more">LÆS MERE</button>-->
             </div>
         </article>
+        <div class="strokeimg">
+            <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/green_stroke.svg" alt="grønt penselstrøg">
+        </div>
 
-        <section id="keramikcontainer">
-        </section>
+        <div class="bestil">
+            <h2>Bestil keramikpakke</h2>
+        </div>
+
+        <form name="bestilling" netlify>
+            <div class="form-felt">
+                <label for="full-name">Fulde navn</label>
+                <input id="full-name" name="fname" type="text">
+            </div>
+
+            <div class="form-felt">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email">
+            </div>
+
+            <div class="form-felt">
+                <label for="tel">Telefon</label>
+                <input id="tel" name="tel" type="tel">
+            </div>
+
+            <div class="form-felt">
+                <label for="afhentning">Afhentningsdato</label>
+                <input id="date" name="date" type="date">
+            </div>
+
+            <div class="form-felt">
+                <label>Pakkenummer
+                    <select name="liste">
+                        <option value="">Vælg pakke</option>
+                        <option value="et">Keramikpakke 1</option>
+                        <option value="to">Keramikpakke 2</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-felt">
+                <label>Farver
+                    <select name="liste">
+                        <option value="">Vælg 3 farver</option>
+                        <option value="rød">Rød</option>
+                        <option value="blå">Blå</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-felt">
+                <label>Har du nogle tilføjelser til bestillingen?
+                    <textarea name="besked" rows="5"></textarea>
+                </label>
+            </div>
+
+            <button>Indsend</button>
+        </form>
+
     </main> <!-- #main -->
 </section> <!-- #primary -->
 
 
 <script>
     let keramikpakke;
-    let indhold;
 
     const dbUrl = "http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-json/wp/v2/keramikpakke/" + <?php echo get_the_ID() ?>;
 
     async function getJson() {
-        const data = await fetch("dbUrl");
+        const data = await fetch(dbUrl);
         keramikpakke = await data.json();
         visKeramikpakker();
     }
 
     function visKeramikpakker() {
-        klon.querySelector(".keramikpakkeimg").src = keramikpakke.billede.guid;
-        klon.querySelector("h2").textContent = keramikpakke.title.rendered;
-        klon.querySelector(".beskrivelse").textContent = keramikpakke.beskrivelse;
-        klon.querySelector(".pris").textContent = keramikpakke.pris;
+        document.querySelector("h2").textContent = keramikpakke.title.rendered;
+        document.querySelector(".keramikpakkeimg").src = keramikpakke.billede.guid;
+        document.querySelector(".beskrivelse").textContent = keramikpakke.beskrivelse;
+        document.querySelector(".pris").textContent = keramikpakke.pris;
     }
     getJson();
 
