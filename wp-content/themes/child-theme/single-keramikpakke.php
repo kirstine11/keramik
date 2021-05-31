@@ -138,61 +138,63 @@ get_header();
             <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/green_stroke.svg" alt="grønt penselstrøg">
         </div>
 
-        <div class="bestil">
-            <h2>Bestil keramikpakke</h2>
-        </div>
-
-        <form class="bestilling" name="bestilling" data-netlify="true">
-            <div class="content">
-                <div class="form-felt">
-                    <label for="full-name">Fulde navn</label>
-                    <input id="full-name" name="fname" type="text">
-                </div>
-
-                <div class="form-felt">
-                    <label for="email">E-mail</label>
-                    <input id="email" name="email" type="email">
-                </div>
-
-                <div class="form-felt">
-                    <label for="tel">Telefon</label>
-                    <input id="tel" name="tel" type="tel">
-                </div>
-
-                <div class="form-felt">
-                    <label for="afhentning">Afhentningsdato</label>
-                    <input id="date" name="date" type="date">
-                </div>
-
-                <div class="form-felt">
-                    <label>Pakkenummer
-                        <select name="liste">
-                            <option value="">Vælg pakke</option>
-                            <option value="et">Keramikpakke 1</option>
-                            <option value="to">Keramikpakke 2</option>
-                        </select>
-                    </label>
-                </div>
-
-                <div class="form-felt">
-                    <label>Farver
-                        <select name="liste">
-                            <option value="">Vælg 3 farver</option>
-                            <option value="rød">Rød</option>
-                            <option value="blå">Blå</option>
-                        </select>
-                    </label>
-                </div>
-
-                <div class="form-felt">
-                    <label>Har du nogle tilføjelser til bestillingen?
-                        <textarea name="besked" rows="5"></textarea>
-                    </label>
-                </div>
+        <section class="form-section">
+            <div class="bestil">
+                <h2>Bestil keramikpakke</h2>
             </div>
 
-            <button class="indsend">Indsend</button>
-        </form>
+            <form action="contactform.php" class="bestilling" name="kontakt" netlify>
+                <div class="content">
+                    <div class="form-felt">
+                        <label for="full-name">Fulde navn</label>
+                        <input id="full-name" name="fname" type="text">
+                    </div>
+
+                    <div class="form-felt">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email">
+                    </div>
+
+                    <div class="form-felt">
+                        <label for="tel">Telefon</label>
+                        <input id="tel" name="tel" type="tel">
+                    </div>
+
+                    <div class="form-felt">
+                        <label for="afhentning">Afhentningsdato</label>
+                        <input id="date" name="date" type="date">
+                    </div>
+
+                    <div class="form-felt">
+                        <label>Pakkenummer
+                            <select name="liste">
+                                <option value="">Vælg pakke</option>
+                                <option value="et">Keramikpakke 1</option>
+                                <option value="to">Keramikpakke 2</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-felt">
+                        <label>Farver
+                            <select name="liste">
+                                <option value="">Vælg 3 farver</option>
+                                <option value="rød">Rød</option>
+                                <option value="blå">Blå</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-felt">
+                        <label>Har du nogle tilføjelser til bestillingen?
+                            <textarea name="besked" rows="5"></textarea>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" name="submit" class="indsend">Indsend</button>
+            </form>
+        </section>
 
     </main> <!-- #main -->
 </section> <!-- #primary -->
