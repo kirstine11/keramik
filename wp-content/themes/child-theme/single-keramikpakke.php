@@ -143,7 +143,7 @@ get_header();
                 <h2>Bestil keramikpakke</h2>
             </div>
 
-            <form action="contactform.php" class="bestilling" name="kontakt" netlify>
+            <form action="contactform.php" class="bestilling" name="kontakt" method="post">
                 <div class="content">
                     <div class="form-felt">
                         <label for="full-name">Fulde navn</label>

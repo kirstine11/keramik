@@ -1,4 +1,14 @@
 <?php
+/**
+ * The template for displaying front page.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Astra
+ * @since 1.0.0
+ */
+
+
 //for at tjekke if kunden submittede en kontaktform (iseet)
 if (iseet($_POST['submit'])){
   //starter med at tage fat i den information som brugeren skrev i formularen
@@ -21,5 +31,4 @@ if (iseet($_POST['submit'])){
  //en funktion der
     header("Location: single-keramikpakke.php?mailsend");
 }
-
 ?>
