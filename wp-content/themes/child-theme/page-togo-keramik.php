@@ -70,7 +70,9 @@ get_header();
 
     .strokeimg {
         margin-bottom: 40px;
+        width: 100%;
     }
+
 
     #keramikcontainer {
         display: grid;
@@ -126,6 +128,7 @@ get_header();
         font-weight: 600;
         font-size: 25px;
         margin-top: 10px;
+        color: black;
     }
 
     .pris {
@@ -147,6 +150,35 @@ get_header();
         color: white;
     }
 
+    .gavekort {
+        background-color: #B3C8AF;
+        padding: 15px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .indhold h2 {
+        color: #E07A34;
+        padding: 8px;
+    }
+
+    .indhold h3 {
+        padding: 8px;
+        color: white;
+    }
+
+    .indhold p {
+        color: black;
+    }
+
+    .indhold button {
+        align-content: center;
+    }
+
+    .indhold button a {
+        color: white;
+    }
+
     /*   desktop styling */
     @media only screen and (min-width: 900px) {
         #kreamikhead {
@@ -163,7 +195,35 @@ get_header();
             margin-top: 36px;
             margin-left: 41px;
         }
-    }
+
+        .strokeimg {
+            width: 50%;
+        }
+
+        .gavekort {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            text-align: left;
+            margin-top: 186px;
+        }
+
+        .indhold {
+            padding: 30px;
+            word-break: break-word;
+        }
+
+        .indhold h3 {
+            padding: 0;
+        }
+
+        .indhold h2 {
+            padding: 0;
+        }
+
+        .indhold button:hover {
+            background-color: #B3C8AF;
+            border:
+        }
 
 </style>
 <template>
@@ -254,6 +314,18 @@ get_header();
         </div>
 
         <section id="keramikcontainer">
+        </section>
+
+        <section class="gavekort">
+            <div class="indhold">
+                <h2>Gavekort</h2>
+                <h3>Ønsker du at der skal ske noget sjovt derhjemme? Vil du give en særlig gave?</h3>
+                <p>Overrask med en dejlig kreativ mal selv keramik oplevelse til børnene og familien/vennerne, hvor alle kan være med. Kom enten i vores cafe eller bestil en af vores To go pakker. </p>
+                <button><a href="http://kirstinekrogs.dk/kea/eksamen_kreamik/cafe-kontakt/">BESTIL GAVEKORT</a></button>
+            </div>
+            <div class="gavekort_img">
+                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/gavekort-ikon.svg" alt="gavekort ikon">
+            </div>
         </section>
     </main> <!-- #main -->
 </section> <!-- #primary -->
