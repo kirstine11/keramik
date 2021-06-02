@@ -152,11 +152,11 @@ get_header();
         margin-top: -10px;
         background-color: #AF9E91;
         font-family: 'Quicksand', sans-serif;
-        color: black;
+        color: white;
     }
 
     .read_more:hover {
-        color: white;
+        color: black;
     }
 
     .gavekort {
@@ -167,13 +167,13 @@ get_header();
     }
 
     .indhold h2 {
-        color: black;
+        color: #E07A34;
         padding: 8px;
     }
 
     .indhold h3 {
         padding: 8px;
-        color: black;
+        color: white;
     }
 
     .indhold p {
@@ -185,7 +185,7 @@ get_header();
     }
 
     .indhold button a {
-        color: black;
+        color: white;
     }
 
     /*   desktop styling */
@@ -193,6 +193,8 @@ get_header();
         #kreamikhead {
             display: grid;
             grid-template-columns: 3fr 1fr;
+            margin: 0 auto;
+
         }
 
         #kreamikhead h2 {
