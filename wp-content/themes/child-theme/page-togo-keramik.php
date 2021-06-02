@@ -222,7 +222,7 @@ get_header();
 
         .indhold button:hover {
             background-color: #B3C8AF;
-            border:
+            border: 1px solid #E07A34;
         }
 
 </style>
