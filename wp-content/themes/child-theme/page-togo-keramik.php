@@ -246,14 +246,14 @@ get_header();
             <div id="kreamikhead">
                 <h1>To go keramik</h1>
                 <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/orange_streg.svg" alt="orange penselstrøg">
-                <h6>Hos Kreamik har du også mulighed for at købe ToGo keramikpakker. Nedenfor kan du se hvordan det fungerer.</h6>
+                <h6>Hos Kreamik har du også mulighed for at købe to go keramikpakker. Du kan vælge blandt 300 stykker keramik og over 50 forskellige farver. Nedenfor kan du se hvordan du kan bestille din to go keramikpakke.</h6>
 
             </div>
             <section class="infografik">
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vaelgkeramikpakker.png" alt="kasse med keramik">
                     <h4>1 Vælg keramikpakke</h4>
-                    <p>Pensler lånes med. Har du andre ønsker du skriv til kontakt@kreamik.dk.</p>
+                    <p>Pensler lånes med din to go pakke. Har du andre ønsker du skriv til <a href="http://kirstinekrogs.dk/kea/eksamen_kreamik/cafe-kontakt/">kontakt@kreamik.dk.</a></p>
                 </div>
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vaelgfarver.png">
@@ -268,11 +268,11 @@ get_header();
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/mobilepay-1.png" alt="kasse med keramik">
                     <h4>4 Betal på mobilepay</h4>
-                    <p>Betal på nummeret bla bla</p>
+                    <p>Betal for din to go keramikpakke på nummeret 120210 på mobilepay.</p>
                 </div>
                 <div class="step">
                     <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/hent.png" alt="kasse med keramik">
-                    <h4>5 Hent din keramikpakke</h4>
+                    <h4>5 Afhent din to go keramikpakke</h4>
                     <p>Hent din keramikpakke om lørdagen mellem 13-15. Her vil du også få nogle tips og tricks med på vejen.</p>
                 </div>
                 <div class="step">
