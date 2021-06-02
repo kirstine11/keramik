@@ -29,6 +29,11 @@ get_header();
         color: #246548;
     }
 
+    #kreamikhead h2 {
+        color: black;
+        font-size: 15px;
+    }
+
     .infografik {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -39,9 +44,11 @@ get_header();
         padding: 15px;
     }
 
+    /*
     .step img {
-        width: 150px;
+    width: 150px;
     }
+*/
 
     .step {
         width: 100%;
@@ -54,23 +61,26 @@ get_header();
         word-break: break-word;
     }
 
-    .step h4 {
+    .step h3 {
         font-family: neue-kabel, sans-serif;
         font-weight: 600;
     }
 
-    .step h4:first-letter {
+    .step h3:first-letter {
         color: #E07A34;
         font-size: 30px;
     }
 
+    /*
     .keramikpakkeimg {
-        width: 400px;
+    width: 100%;
+    height: 100%;
     }
+*/
 
     .strokeimg {
         margin-bottom: 40px;
-        width: 100%;
+        /*        width: 100%;*/
     }
 
 
@@ -113,7 +123,6 @@ get_header();
     }
 
     #filtrering img {
-        width: 25px;
         margin: auto;
     }
 
@@ -143,7 +152,7 @@ get_header();
         margin-top: -10px;
         background-color: #AF9E91;
         font-family: 'Quicksand', sans-serif;
-        color: white;
+        color: black;
     }
 
     .read_more:hover {
@@ -158,13 +167,13 @@ get_header();
     }
 
     .indhold h2 {
-        color: #E07A34;
+        color: black;
         padding: 8px;
     }
 
     .indhold h3 {
         padding: 8px;
-        color: white;
+        color: black;
     }
 
     .indhold p {
@@ -176,7 +185,7 @@ get_header();
     }
 
     .indhold button a {
-        color: white;
+        color: black;
     }
 
     /*   desktop styling */
@@ -186,7 +195,7 @@ get_header();
             grid-template-columns: 3fr 1fr;
         }
 
-        #kreamikhead h6 {
+        #kreamikhead h2 {
             margin-top: -11px;
             margin-left: 41px;
         }
@@ -196,9 +205,11 @@ get_header();
             margin-left: 41px;
         }
 
+        /*
         .strokeimg {
-            width: 50%;
+        width: 50%;
         }
+*/
 
         .gavekort {
             display: grid;
@@ -228,7 +239,7 @@ get_header();
 </style>
 <template>
     <article class="loopart">
-        <img src="" alt="keramikpakke_billede" class="keramikpakkeimg">
+        <img src="" alt="keramikpakke_billede" class="keramikpakkeimg" height="800" width="450">
         <h2 class="pakkenr"></h2>
         <div class="tekst">
             <h2 class="titel"></h2>
@@ -245,70 +256,70 @@ get_header();
 
             <div id="kreamikhead">
                 <h1>To go keramik</h1>
-                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/orange_streg.svg" alt="orange penselstrøg">
-                <h6>Hos Kreamik har du også mulighed for at købe to go keramikpakker. Du kan vælge blandt 300 stykker keramik og over 50 forskellige farver. Nedenfor kan du se hvordan du kan bestille din to go keramikpakke.</h6>
+                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/orange_streg.svg" width="247" height="439" alt="to go orange penselstrøg">
+                <h2>Hos Kreamik har du også mulighed for at købe to go keramikpakker. Du kan vælge blandt 300 stykker keramik og over 50 forskellige farver. Nedenfor kan du se hvordan du kan bestille din to go keramikpakke.</h2>
 
             </div>
             <section class="infografik">
                 <div class="step">
-                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vaelgkeramikpakker.png" alt="kasse med keramik">
-                    <h4>1 Vælg keramikpakke</h4>
-                    <p>Pensler lånes med din to go pakke. Har du andre ønsker du skriv til <a href="http://kirstinekrogs.dk/kea/eksamen_kreamik/cafe-kontakt/">kontakt@kreamik.dk.</a></p>
+                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/ikon1.svg" width="150" height="266" alt="to go kasse med keramik ikon">
+                    <h3>1 Vælg keramikpakke</h3>
+                    <p>Pensler lånes med din to go pakke. Har du andre ønsker du skriv til <a href=" http://kirstinekrogs.dk/kea/eksamen_kreamik/cafe-kontakt/">kontakt@kreamik.dk.</a></p>
                 </div>
                 <div class="step">
-                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vaelgfarver.png">
-                    <h4>2 Vælg tre farver</h4>
+                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/ikon2.svg" width="150" height="266" alt="to go farver ikon">
+                    <h3>2 Vælg tre farver</h3>
                     <p>Ønsker du flere farver? Du kan vælge mellem 50 farver. Tilkøb koster 25 kr.</p>
                 </div>
                 <div class="step">
-                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/book.png">
-                    <h4>3 Book afhentningsdag</h4>
+                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/ikon3.svg" width="150" height="266" alt="to go kalender ikon">
+                    <h3>3 Book afhentningsdag</h3>
                     <p>Her har du mulighed for at booke din afhentningsdag.</p>
                 </div>
                 <div class="step">
-                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/mobilepay-1.png" alt="kasse med keramik">
-                    <h4>4 Betal på mobilepay</h4>
+                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/ikon4.svg" alt="to go mobilepay ikon" width="150" height="266">
+                    <h3>4 Betal på mobilepay</h3>
                     <p>Betal for din to go keramikpakke på nummeret 120210 på mobilepay.</p>
                 </div>
                 <div class="step">
-                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/hent.png" alt="kasse med keramik">
-                    <h4>5 Afhent din to go keramikpakke</h4>
+                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/ikon5.svg" alt="to go kasse ikon" width="150" height="266">
+                    <h3>5 Afhent din to go keramikpakke</h3>
                     <p>Hent din keramikpakke om lørdagen mellem 13-15. Her vil du også få nogle tips og tricks med på vejen.</p>
                 </div>
                 <div class="step">
-                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/aflever.png" alt="kasse med keramik">
-                    <h4>6 Aflever keramik til brænding</h4>
+                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/ikon6.svg" alt="to go boks afleveres ikon" width="150" height="266">
+                    <h3>6 Aflever keramik til brænding</h3>
                     <p>Aflever dit malede keramik til brænding samt pensler på lørdage mellem 13-15.</p>
                 </div>
                 <div class="step">
-                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/braender.png" alt="kasse med keramik">
-                    <h4>7 Vi brænder dit keramik</h4>
+                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/ikon7.svg" alt="to go glasering ikon" width="150" height="266">
+                    <h3>7 Vi brænder dit keramik</h3>
                     <p>Vi glaserer og brænder dit keramik, hvilket er inkluderet i pakkeprisen.</p>
                 </div>
                 <div class="step">
-                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/afhentigen.png" alt="kasse med keramik">
-                    <h4>8 Afhent efter 1-2 uger</h4>
+                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/ikon8.svg" alt="to go afhentning ikon" width="150" height="266">
+                    <h3>8 Afhent efter 1-2 uger</h3>
                     <p>Afhent dit færdige keramik efter 1-2 uger på lørdage mellem 13-15.</p>
                 </div>
             </section>
             <div class="strokeimg">
-                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/green_stroke.svg" alt="grønt penselstrøg">
+                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/green_stroke.svg" width="700" height="1244" alt="to go grønt penselstrøg">
             </div>
 
             <nav id="filtrering">
-                <button data-keramikpakke="alle"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/alle2.svg"> Alle </button>
+                <button data-keramikpakke="alle"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/alle2.svg" width="25" height="44" alt="to go alle ikon"> Alle </button>
 
-                <button data-keramikpakke="6"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/krus.svg"> Krus </button>
+                <button data-keramikpakke="6"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/krus.svg" width="25" height="44" alt="to go krus ikon"> Krus </button>
 
-                <button data-keramikpakke="5"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vase2.svg"> Vase </button>
+                <button data-keramikpakke="5"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/vase2.svg" width="25" height="44" alt="to go vase ikon"> Vase </button>
 
-                <button data-keramikpakke="13"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/skal.svg"> Skål </button>
+                <button data-keramikpakke="13"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/skal.svg" width="25" height="44" alt="to go skål ikon"> Skål </button>
 
-                <button data-keramikpakke="14"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/fad.svg"> Fad </button>
+                <button data-keramikpakke="14"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/fad.svg" width="25" height="44" alt="to go fad ikon"> Fad </button>
 
-                <button data-keramikpakke="15"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/figur-1.svg"> Figur </button>
+                <button data-keramikpakke="15"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/figur-1.svg" width="25" height="44" alt="to go figur ikon"> Figur </button>
 
-                <button data-keramikpakke="16"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/andet.svg"> Andet </button>
+                <button data-keramikpakke="16"> <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/andet.svg" width="25" height="44" alt="to go andet ikon"> Andet </button>
             </nav>
 
         </div>
@@ -324,7 +335,7 @@ get_header();
                 <button><a href="http://kirstinekrogs.dk/kea/eksamen_kreamik/cafe-kontakt/">BESTIL GAVEKORT</a></button>
             </div>
             <div class="gavekort_img">
-                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/gavekort-ikon.svg" alt="gavekort ikon">
+                <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/gavekort-ikon.svg" width="400" height="711" alt="to go gavekort ikon">
             </div>
         </section>
     </main> <!-- #main -->
