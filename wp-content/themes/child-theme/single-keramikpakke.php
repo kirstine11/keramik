@@ -131,7 +131,6 @@ get_header();
                     <p class="beskrivelse"></p>
                     <p class="pris"></p>
                 </div>
-                <!--                <button class="read_more">LÆS MERE</button>-->
             </div>
         </article>
         <div class="strokeimg">
@@ -143,7 +142,7 @@ get_header();
                 <h2>Bestil keramikpakke</h2>
             </div>
 
-            <form action="contactform.php" class="bestilling" name="kontakt" method="post">
+            <form class="bestilling" name="kontakt" method="post">
                 <div class="content">
                     <div class="form-felt">
                         <label for="full-name">Fulde navn</label>

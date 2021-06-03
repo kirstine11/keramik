@@ -188,6 +188,8 @@ get_header();
         color: white;
     }
 
+
+
     /*   desktop styling */
     @media only screen and (min-width: 900px) {
         #kreamikhead {
@@ -238,6 +240,10 @@ get_header();
             border: 1px solid #E07A34;
         }
 
+        #kreamikhead img {
+            width: 100%;
+        }
+
 </style>
 <template>
     <article class="loopart">
@@ -260,7 +266,6 @@ get_header();
                 <h1>To go keramik</h1>
                 <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/orange_streg.svg" width="247" height="439" alt="to go orange penselstrøg">
                 <h2>Hos Kreamik har du også mulighed for at købe to go keramikpakker. Du kan vælge blandt 300 stykker keramik og over 50 forskellige farver. Nedenfor kan du se hvordan du kan bestille din to go keramikpakke.</h2>
-
             </div>
             <section class="infografik">
                 <div class="step">
