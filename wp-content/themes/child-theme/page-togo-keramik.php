@@ -44,12 +44,6 @@ get_header();
         padding: 15px;
     }
 
-    /*
-    .step img {
-    width: 150px;
-    }
-*/
-
     .step {
         width: 100%;
         text-align: center;
@@ -71,16 +65,9 @@ get_header();
         font-size: 30px;
     }
 
-    /*
-    .keramikpakkeimg {
-    width: 100%;
-    height: 100%;
-    }
-*/
 
     .strokeimg {
         margin-bottom: 40px;
-        /*        width: 100%;*/
     }
 
 
@@ -150,7 +137,7 @@ get_header();
 
     .read_more {
         margin-top: -10px;
-        background-color: #AF9E91;
+        background-color: #246548;
         font-family: 'Quicksand', sans-serif;
         color: white;
     }
@@ -167,7 +154,7 @@ get_header();
     }
 
     .indhold h2 {
-        color: #E07A34;
+        color: #246548;
         padding: 8px;
     }
 
