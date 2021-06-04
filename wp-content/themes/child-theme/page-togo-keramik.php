@@ -200,12 +200,6 @@ get_header();
             margin-left: 41px;
         }
 
-        /*
-        .strokeimg {
-        width: 50%;
-        }
-*/
-
         .gavekort {
             display: grid;
             grid-template-columns: 2fr 1fr;
