@@ -199,6 +199,10 @@ get_header();
 
         }
 
+        keramikpakkeimg {
+            width: 330px;
+        }
+
         #kreamikhead h2 {
             margin-top: -11px;
             margin-left: 41px;
@@ -411,9 +415,6 @@ get_header();
             }
         })
     }
-
-
-
     getJson();
 
 </script>

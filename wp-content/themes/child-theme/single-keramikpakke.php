@@ -213,8 +213,10 @@ get_header();
     function visKeramikpakker() {
         document.querySelector("h2").textContent = keramikpakke.title.rendered;
         document.querySelector(".keramikpakkeimg").src = keramikpakke.billede.guid;
+
         document.querySelector(".beskrivelse").textContent = keramikpakke.beskrivelse;
         document.querySelector(".pris").textContent = keramikpakke.pris;
+
     }
     getJson();
 
