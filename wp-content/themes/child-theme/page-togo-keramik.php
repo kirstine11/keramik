@@ -251,11 +251,12 @@ get_header();
             <div id="kreamikhead">
                 <h1>To go keramik</h1>
                 <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/05/orange_streg.svg" width="247" height="439" alt="to go orange penselstrøg">
-                <h2>Hos Kreamik har du også mulighed for at købe to go keramikpakker. Du kan vælge blandt 300 stykker keramik og over 50 forskellige farver. Nedenfor kan du se hvordan du kan bestille din to go keramikpakke.</h2>
+                <h2>Hos Kreamik har du også mulighed for at købe to go keramikpakker. Du kan vælge blandt 300 stykker keramik og over 50 forskellige farver. Nedenfor kan du se hvordan du kan bestille din to go keramikpakke.
+                </h2>
             </div>
             <section class="infografik">
                 <div class="step">
-                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/vaelgkeramikpakker.svg" width="150" height="266" alt="to go kasse med keramik ikon">
+                    <img src="http://kirstinekrogs.dk/kea/eksamen_kreamik/wp-content/uploads/2021/06/vaelgkeramikpakker.svg" width="60" height="106" alt="to go kasse med keramik ikon">
                     <h3>1 Vælg keramikpakke</h3>
                     <p>Pensler lånes med din to go pakke. Har du andre ønsker du skriv til <a href=" http://kirstinekrogs.dk/kea/eksamen_kreamik/cafe-kontakt/">kontakt@kreamik.dk.</a></p>
                 </div>
